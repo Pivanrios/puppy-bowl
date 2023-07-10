@@ -3,12 +3,12 @@ export function Front(){
     return <div> <img src="" alt="Loki" /></div>
 }
 //Description of the card
-export function Back(){
+export function Back(props){
     return(
         <>
         <div>
-            <h1></h1>
-            <p></p>
+            <h1>{props.dog.name}</h1>
+            <p>{}</p>
             <p></p>
             <button>Edit</button>
         </div>
@@ -24,7 +24,7 @@ export default function Carta(){
         <>
         <div>
             <Front />
-            <Back />
+            <Back dog={{name:"loki"}}/>
         </div>
         </>
     )
